@@ -64,53 +64,53 @@
 
 
 //------------------------------------------B------------------------------------------------------------
-// let ques = document.getElementById("mid").getElementsByTagName("p")[0]
-// let input = document.getElementById("input")
-// let btn = document.getElementById(`btn`)
-// let countUi = document.getElementById(`count`)
-// let count = 3
-// let res = document.getElementById(`res`)
-// function quayso() {
-//     if (input.value < 1 || input.value > 10) {
-//         alert("Bạn phải nhập số từ 1 đến 10")
-//         input.value = ""
-//     }
+let ques = document.getElementById("mid").getElementsByTagName("p")[0]
+let input = document.getElementById("input")
+let btn = document.getElementById(`btn`)
+let countUi = document.getElementById(`count`)
+let count = 3
+let res = document.getElementById(`res`)
+let kq = Math.floor(Math.random() * 10 + 1)
+function quayso() {
+    if (input.value < 1 || input.value > 10) {
+        alert("Bạn phải nhập số từ 1 đến 10")
+        input.value = ""
+    }
 
-//     else if (Number(input.value).toString() == `NaN`) {
-//         alert("Không được nhập chữ")
-//         input.value = ""
-//     }
-//     else {
-//         let kq = Math.floor(Math.random() * 10 + 1)
-//         if (input.value == kq) {
-//             countUi.textContent = ""
-//             res.innerHTML = `  <h2>Kết quả là: <span>${kq}</span></h2>
-//             <p class="congra">Chúc mừng bạn đã trúng:</p><p class="congra"> 1 con búp bê</>`
-//             btn.removeEventListener('click', quayso)
-//             ques.textContent = "Bạn có muốn chơi lại không?"
-//             btn.className = "remake"
-//             btn.textContent = "CHƠI LẠI"
-//             console.log(btn)
-//             btn.addEventListener(`click`, () => { location.reload() })
-//         }
-//         else {
-//             countUi.textContent = `Bạn còn ${count - 1} lượt chơi`
-//             res.innerHTML = `<h2><p>Số bạn dự đoán:&nbsp;&nbsp; <span>${input.value}</span> </p> <p>Kết quả là:&nbsp;&nbsp; <span>${kq}</span></p></h2>
-//             <P id="next">Chúc bạn may mắn lần sau</P>`
-//             count--
-//             kq = Math.floor(Math.random() * 10 + 1)
-//             if (count == 0 && input.value != kq) {
-//                 res.innerHTML = `<h2><p>Số bạn dự đoán:&nbsp;&nbsp; <span>${input.value}</span> </p> <p>Kết quả là:&nbsp;&nbsp; <span>${kq}</span></p></h2>
-//                 <P id="next">Chúc bạn may mắn lần sau</P>
-//                 <h1 id="gameover">Bạn hết lượt chơi rồi !!!</h1>`
-//                 btn.removeEventListener('click', quayso)
-//                 ques.textContent = "Bạn có muốn chơi lại không?"
-//                 btn.className = "remake"
-//                 btn.textContent = "CHƠI LẠI"
-//                 btn.addEventListener(`click`, () => { location.reload() })
-//             }
-//             input.value = ""
-//         }
-//     }
-// }
-// btn.addEventListener(`click`, quayso)
+    else if (Number(input.value).toString() == `NaN`) {
+        alert("Không được nhập chữ")
+        input.value = ""
+    }
+    else {
+        console.log(kq)
+        if (input.value == kq) {
+            countUi.textContent = ""
+            res.innerHTML = `  <h2>Kết quả trúng thưởng là: <span>${kq}</span></h2>
+            <p class="congra">Chúc mừng bạn đã trúng:</p><p class="congra"> 1 con búp bê</>`
+            btn.removeEventListener('click', quayso)
+            ques.textContent = "Bạn có muốn chơi lại không?"
+            btn.className = "remake"
+            btn.textContent = "CHƠI LẠI"
+            console.log(btn)
+            btn.addEventListener(`click`, () => { location.reload() })
+        }
+        else {
+            countUi.textContent = `Bạn còn ${count - 1} lượt chơi`
+            res.innerHTML = `<h2><p>Số bạn dự đoán:&nbsp;&nbsp; <span>${input.value}</span> </p> </h2>
+            <P id="next">Bạn đã sai rồi </P>`
+            count--
+            if (count == 0 && input.value != kq) {
+                res.innerHTML = `<h2><p>Số bạn dự đoán:&nbsp;&nbsp; <span>${input.value}</span> </p> <p>Kết quả là:&nbsp;&nbsp; <span>${kq}</span></p></h2>
+                <P id="next">Chúc bạn may mắn lần sau</P>
+                <h1 id="gameover">Bạn hết lượt chơi rồi !!!</h1>`
+                btn.removeEventListener('click', quayso)
+                ques.textContent = "Bạn có muốn chơi lại không?"
+                btn.className = "remake"
+                btn.textContent = "CHƠI LẠI"
+                btn.addEventListener(`click`, () => { location.reload() })
+            }
+            input.value = ""
+        }
+    }
+}
+btn.addEventListener(`click`, quayso)

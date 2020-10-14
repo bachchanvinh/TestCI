@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@300&display=swap');
+*{
+    font-family: 'Commissioner', sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+}
+
+#h1{
+    display: flex;
+    justify-content: center;
+    background-color: brown;
+    padding: 10pt;
+    width: auto;
+    font-size: 50pt;
+    color: white;
+    margin-bottom: 0;
+    border: black solid thin;
+    border-bottom: none;
+}
+#mid{
+    background-color: lightcyan;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding: 20pt 20pt;
+    border-left: black solid thin;
+    border-right:black solid thin ;
+ 
+}
+#mid p {
+    font-size: 12pt;
+}
+#mid #count{
+   align-self: flex-end;
+   color: deeppink;
+   font-weight: bold;
+}
+#mid input{
+    height: 25pt;
+    width: 250px;
+    font-size: 14pt;
+
+}
+#mid .play{
+    height: 30pt;
+    width: 150px;
+    background-color: greenyellow;
+    border-radius: 8pt;
+    border: gray solid thin;
+    font-size: 15pt;
+}
+.remake{
+    height: 30pt;
+    width: 150px;
+    background-color: violet;
+    border-radius: 8pt;
+    border: gray solid thin;
+    font-size: 15pt;
+}
+
+#res{
+    margin: 0px;
+    background-color: wheat;
+    padding:8pt 20pt;
+    border: black solid thin;
+    border-top: white;
+}
+#res h2{
+    padding: 0 10px;
+    margin-top: 0px;
+}
+#res span{
+    font-size: 40pt;
+    color:red
+}
+#next{
+    color: darkblue;
+    font-size: 15pt;
+   display: flex;
+   justify-content: center;
+}
+.congra{
+    color: tomato;
+    font-size: 25pt;
+   display: flex;
+   justify-content: center;
+}
+
+#gameover{
+    display: flex;
+    justify-content: center;
+    size: 40pt;
+    color: tomato;
+}
